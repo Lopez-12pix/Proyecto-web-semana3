@@ -1,0 +1,396 @@
+
+/* 1. Configuración general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --morado: #5b3cc4;
+    --morado-oscuro: #35216f;
+    --lila: #eee9ff;
+    --turquesa: #b9f0e7;
+    --blanco: #ffffff;
+    --texto: #343047;
+    --gris: #6e6a80;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--blanco);
+    color: var(--texto);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* 2. Encabezado con Flexbox */
+.encabezado {
+    background-color: var(--blanco);
+    border-bottom: 1px solid #eeeaf7;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 18px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.logo {
+    color: var(--morado);
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 22px;
+    list-style: none;
+}
+
+.menu a {
+    color: var(--texto);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: var(--morado);
+}
+
+/* 3. Sección principal */
+.hero {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 75px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 45px;
+}
+
+.hero-texto {
+    flex: 1 1 400px;
+}
+
+.etiqueta {
+    display: inline-block;
+    color: var(--morado);
+    background-color: var(--lila);
+    padding: 6px 13px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.hero h1 {
+    font-size: clamp(2.2rem, 5vw, 3.7rem);
+    line-height: 1.15;
+    margin: 22px 0;
+    color: var(--morado-oscuro);
+}
+
+.hero h1 span {
+    color: var(--morado);
+}
+
+.hero-texto > p {
+    max-width: 580px;
+    color: var(--gris);
+    font-size: 1.08rem;
+}
+
+.hero-botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 28px;
+}
+
+.boton {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.boton:hover {
+    transform: translateY(-3px);
+}
+
+.boton-principal {
+    background-color: var(--morado);
+    color: var(--blanco);
+}
+
+.boton-principal:hover {
+    background-color: var(--morado-oscuro);
+}
+
+.boton-secundario {
+    border: 2px solid var(--morado);
+    color: var(--morado);
+}
+
+/* 4. Ilustración decorativa */
+.hero-ilustracion {
+    flex: 1 1 300px;
+    min-height: 330px;
+    background: linear-gradient(135deg, var(--lila), var(--turquesa));
+    border-radius: 45% 55% 55% 45% / 50% 45% 55% 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circulo {
+    width: 245px;
+    height: 245px;
+    background-color: var(--blanco);
+    border-radius: 50%;
+    box-shadow: 0 15px 40px #35216f20;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.circulo span {
+    font-size: 2.5rem;
+    color: var(--morado);
+}
+
+.circulo h2 {
+    color: var(--morado-oscuro);
+    line-height: 1.3;
+}
+
+.circulo p {
+    color: var(--gris);
+    font-size: 0.9rem;
+    margin-top: 8px;
+}
+
+/* 5. Secciones generales */
+.seccion {
+    padding: 75px 25px;
+}
+
+.consejos,
+.docentes {
+    background-color: #faf9ff;
+}
+
+.titulo-seccion {
+    max-width: 750px;
+    margin: 0 auto 38px;
+    text-align: center;
+}
+
+.titulo-seccion h2,
+.estudiantes h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    line-height: 1.25;
+    color: var(--morado-oscuro);
+    margin: 18px 0;
+}
+
+.titulo-seccion > p {
+    color: var(--gris);
+}
+
+/* 6. Tarjetas con Flexbox */
+.tarjetas {
+    max-width: 1150px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 22px;
+}
+
+.tarjeta {
+    background-color: var(--blanco);
+    border: 1px solid #e9e3fa;
+    border-radius: 18px;
+    padding: 28px;
+    flex: 1 1 235px;
+    box-shadow: 0 8px 25px #35216f08;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px #35216f15;
+}
+
+.icono {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background-color: var(--lila);
+    color: var(--morado);
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 18px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tarjeta h3 {
+    margin-bottom: 10px;
+    color: var(--morado-oscuro);
+}
+
+.tarjeta p {
+    color: var(--gris);
+}
+
+/* 7. Sección para estudiantes */
+.estudiantes {
+    max-width: 1150px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.estudiantes-texto {
+    flex: 1 1 400px;
+}
+
+.estudiantes-texto p {
+    color: var(--gris);
+}
+
+.lista-consejos {
+    flex: 1 1 320px;
+    background-color: var(--lila);
+    padding: 28px;
+    border-radius: 18px;
+}
+
+.lista-consejos p {
+    padding: 9px 0;
+    font-weight: bold;
+    color: var(--morado-oscuro);
+}
+
+/* 8. Sección para docentes */
+.docentes-flex {
+    max-width: 1150px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.docente-item {
+    flex: 1 1 250px;
+    padding: 25px;
+    border-radius: 15px;
+    background-color: var(--blanco);
+    border: 1px solid #e9e3fa;
+}
+
+.docente-item h3 {
+    color: var(--morado);
+    margin-bottom: 10px;
+}
+
+.docente-item p {
+    color: var(--gris);
+}
+
+/* 9. Mensaje final */
+.mensaje-final {
+    background: linear-gradient(120deg, var(--morado-oscuro), var(--morado));
+    color: var(--blanco);
+    padding: 65px 25px;
+    text-align: center;
+}
+
+.mensaje-final h2 {
+    font-size: clamp(1.7rem, 4vw, 2.5rem);
+    margin-bottom: 15px;
+}
+
+.mensaje-final p {
+    max-width: 650px;
+    margin: 0 auto 25px;
+}
+
+.mensaje-final .boton-principal {
+    background-color: var(--blanco);
+    color: var(--morado);
+}
+
+/* 10. Pie de página */
+.footer {
+    padding: 25px;
+    text-align: center;
+    background-color: #241747;
+    color: #e5defb;
+    font-size: 0.9rem;
+}
+
+/* 11. Adaptación para teléfonos */
+@media (max-width: 650px) {
+    .navbar {
+        justify-content: center;
+    }
+
+    .menu {
+        justify-content: center;
+        gap: 12px 18px;
+    }
+
+    .hero {
+        padding-top: 45px;
+        gap: 30px;
+    }
+
+    .hero-ilustracion {
+        min-height: 280px;
+    }
+
+    .circulo {
+        width: 215px;
+        height: 215px;
+    }
+
+    .seccion {
+        padding: 50px 20px;
+    }
+}
