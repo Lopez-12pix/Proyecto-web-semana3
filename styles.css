@@ -404,10 +404,10 @@ a {
     transition: all 0.35s ease;
 }
 
-/* Efecto al pasar el cursor */
+/* Efecto al pasar el cursor sobre las tarjetas */
 .tarjeta:hover {
     transform: translateY(-10px) scale(1.02);
-    border-color: #ba183e;
+    border-color: #4d0352;
     box-shadow: 0 18px 35px rgba(91, 60, 196, 0.18);
 }
 
