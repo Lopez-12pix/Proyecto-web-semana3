@@ -1,4 +1,3 @@
-
 /* 1. Configuración general */
 * {
     margin: 0;
@@ -393,4 +392,44 @@ a {
     .seccion {
         padding: 50px 20px;
     }
+
+/* 12. Mejora creativa asistida por IA */
+
+/* Efecto moderno para las tarjetas */
+.tarjeta {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #e9e3fa;
+    box-shadow: 0 8px 25px rgba(53, 33, 111, 0.08);
+    transition: all 0.35s ease;
+}
+
+/* Efecto al pasar el cursor */
+.tarjeta:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: #5b3cc4;
+    box-shadow: 0 18px 35px rgba(91, 60, 196, 0.18);
+}
+
+/* Mejora visual de los botones */
+.boton {
+    transition: all 0.3s ease;
+}
+
+.boton:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(91, 60, 196, 0.20);
+}
+
+/* Accesibilidad: movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+
 }
