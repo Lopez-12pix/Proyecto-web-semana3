@@ -407,7 +407,7 @@ a {
 /* Efecto al pasar el cursor */
 .tarjeta:hover {
     transform: translateY(-10px) scale(1.02);
-    border-color: #5b3cc4;
+    border-color: #ba183e;
     box-shadow: 0 18px 35px rgba(91, 60, 196, 0.18);
 }
 
